@@ -9,6 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
         question7: "Solo"
     };
 
+    const questionTitles = [
+        "Вопрос 1",
+        "Вопрос 2",
+        "Вопрос 3",
+        "Вопрос 4",
+        "Вопрос 5",
+        "Вопрос 6",
+        "Вопрос 7"
+    ];
+
     const quizForm = document.getElementById("quizForm");
     const checkButton = document.getElementById("checkButton");
     const restartButton = document.getElementById("restartButton");
@@ -17,39 +27,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     checkButton.addEventListener("click", () => {
         let score = 0;
+        scoreDisplay.innerHTML = "";
         detailedResults.innerHTML = "";
+
+        // Получаем все элементы feedback
+        const feedbackElements = document.querySelectorAll('.feedback');
+
+        // Скрываем все элементы feedback перед новой проверкой
+        feedbackElements.forEach(feedback => {
+            feedback.classList.add('hidden');
+            feedback.innerHTML = ''; // Очищаем предыдущие результаты
+        });
+
         const formData = new FormData(quizForm);
-        const detailedResultsData = []; // Для сохранения детализированных результатов
 
         Object.keys(answers).forEach((key, index) => {
             const userAnswer = formData.get(key)?.trim() || "";
-            const questionNumber = index + 1;
-            const resultItem = document.createElement("div");
+            const feedbackElement = feedbackElements[index]; // Получаем соответствующий элемент feedback
+            let correctAnswer = answers[key];
 
-            let correct = false; // Флаг для правильного ответа
-            let correctAnswer = answers[key]; // Правильный ответ для сохранения
-
-            if (userAnswer === answers[key]) {
+            if (userAnswer === correctAnswer) {
                 score++;
-                correct = true;
-                resultItem.innerHTML = `<p>Вопрос ${questionNumber}: <span class="correct">Правильно</span> (Правильный ответ: ${correctAnswer})</p>`;
+                feedbackElement.innerHTML = `<span class="correct">Правильно! (Правильный ответ: ${correctAnswer})</span>`;
             } else {
-                resultItem.innerHTML = `<p>Вопрос ${questionNumber}: <span class="incorrect">Неправильно</span> (Правильный ответ: ${correctAnswer})</p>`;
+                feedbackElement.innerHTML = `<span class="incorrect">Неправильно! (Правильный ответ: ${correctAnswer})</span>`;
             }
+            
+            // Показываем результат под вопросом
+            feedbackElement.classList.remove('hidden');
 
-            // Сохраняем данные для детализированных результатов
-            detailedResultsData.push({ question: questionNumber, correct, userAnswer, correctAnswer });
-
-            detailedResults.appendChild(resultItem);
+            // Добавляем результаты в общий отчет с правильными заголовками
+            detailedResults.innerHTML += `<p>${questionTitles[index]}: ${feedbackElement.innerHTML}</p>`;
         });
 
         scoreDisplay.innerHTML = `<p>Вы набрали <strong>${score}</strong> из <strong>${Object.keys(answers).length}</strong> баллов.</p>`;
-        checkButton.disabled = true;
         restartButton.classList.remove("hidden");
+        checkButton.disabled = true; // Блокируем кнопку проверки
+        const resultData = {
+score: score,
+total: Object.keys(answers).length,
+detailedResults: detailedResults.innerHTML
+};
 
-        // Сохранение в localStorage
-        localStorage.setItem("score", score);
-        localStorage.setItem("detailedResults", JSON.stringify(detailedResultsData));
+// Сохраняем результаты в localStorage
+localStorage.setItem('quizResults', JSON.stringify(resultData));
+
     });
 
     restartButton.addEventListener("click", () => {
@@ -58,6 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
         restartButton.classList.add("hidden");
         scoreDisplay.innerHTML = "";
         detailedResults.innerHTML = "";
-        localStorage.clear(); // Очистка результатов (опционально)
+        
+        // Скрываем все элементы feedback при перезапуске
+        const feedbackElements = document.querySelectorAll('.feedback');
+        feedbackElements.forEach(feedback => {
+            feedback.classList.add('hidden');
+            feedback.innerHTML = ''; // Очищаем предыдущие результаты
+        });
     });
 });

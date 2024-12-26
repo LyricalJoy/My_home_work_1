@@ -26,9 +26,12 @@
         var fail = false; // Переменная для отслеживания ошибок
 
         // Проверка на пустые поля
-        if (name == "" || dob == "") {
-            generalError.textContent = "Заполните все поля";
-            fail = true; // Устанавливаем флаг ошибки
+        if (name == "" ) {
+            nameError.textContent = "Заполните все поля";
+            fail = true; // Устанавливаем флаг ошибки ( dob == "")
+        } else if ( dob == "") {
+            dobError.textContent = "Заполните все поля";
+            fail = true;
         } else if (name.length <= 3 || name.length > 10) {
             nameError.textContent = "Введите корректное имя (от 4 до 10 символов)";
             fail = true; // Устанавливаем флаг ошибки

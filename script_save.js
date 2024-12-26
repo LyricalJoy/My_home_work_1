@@ -1,32 +1,23 @@
-// Чтение данных из localStorage
-const score = localStorage.getItem('score'); // Получаем баллы
-const detailedResultsData = JSON.parse(localStorage.getItem('detailedResults')); // Получаем детализированные результаты
+document.addEventListener("DOMContentLoaded", () => {
+    const scoreDisplay = document.getElementById("scoreDisplay");
+    const detailedResults = document.getElementById("detailedResults");
 
-// Проверяем, есть ли данные
-if (score !== null && detailedResultsData !== null) {
-    // Отображаем общий результат
-    document.getElementById("scoreDisplay").innerHTML = `<h3>Ваши баллы:</h3> ${score} / 7 баллов`;
+    // Получаем результаты из localStorage
+    const resultData = JSON.parse(localStorage.getItem('quizResults'));
 
-    // Создаем HTML для детализированных результатов
-    let detailedResultsHTML = "<h3>Детализированные результаты:</h3>";
-    detailedResultsData.forEach(item => {
-        if (item.correct) {
-            detailedResultsHTML += `<p>Вопрос ${item.question}: <span class="correct">Правильно (Правильный ответ: ${item.correctAnswer})</span></p>`;
-        } else if (item.correctAnswer) {
-            detailedResultsHTML += `<p>Вопрос ${item.question}: <span class="incorrect">Неправильно</span> (Правильный ответ: ${item.correctAnswer})</p>`;
-        } else {
-            detailedResultsHTML += `<p>Вопрос ${item.question}: <span class="incorrect">Не отвечено</span></p>`;
-        }
-    });
-
-    // Вставляем результаты в блок detailedResults
-    document.getElementById("detailedResults").innerHTML = detailedResultsHTML;
-} else {
-    // Если данных нет, выводим сообщение об ошибке
-    document.getElementById("scoreDisplay").innerHTML = "<h3>Данные отсутствуют. Пройдите тест заново.</h3>";
-}
-
-
+    if (resultData) {
+        scoreDisplay.innerHTML = `
+            <p>Вы набрали <strong>${resultData.score}</strong> из <strong>${resultData.total}</strong> баллов.</p>
+        `;
+        detailedResults.innerHTML = `
+            <h3>Детальные результаты:</h3>
+            <div>${resultData.detailedResults}</div>
+        `;
+    } else {
+        scoreDisplay.innerHTML = "<p>Результаты не найдены.</p>";
+        detailedResults.innerHTML = ""; // Очищаем детальные результаты
+    }
+});
 
 
 
