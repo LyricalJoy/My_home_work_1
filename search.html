@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оружия в PUBG</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="st/style_1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="img/icon00.jpg">
 </head>
 <body>
@@ -14,18 +15,132 @@
             <img src="img/logo1.jpg" alt="Логотип" class="logo_type"></a>
             <ul>
                 <li><a href="index.html">Описание</li></a>
-                <li><a href="search.html">Словарик</li></a>
+                <li><a href="search.html" style="color: rgb(255, 183, 0);">Словарик</li></a>
                 <li><a href="slider.html">Галерея</li></a>
                 <li><a href="test.html">Тест</li></a>
             </ul>
+            <div class="lk">
+                <div id="username"></div>
             <a href="tpaccount.html">
                 <img src="img/icon.jpg" alt="Личный кабинет">
-                Личный кабинет
+                <a href="tpaccount.html" style="text-decoration: none; color: #ffffff; 
+                font-size: 20px;">Личный кабинет</a>
             </a>
+          
+            <button id="logoutButton" style="display: none;">Выход</button></div>
     </NAV>
     <MAIN>
-
+        <div class="box">
+        <h1 style="display: flex; justify-content: center;font-size: 45px;">Разновидности оружия в PUBG</h1>
+        <h2>УЗНАЙТЕ БОЛЬШЕ О PUBG!</h2>
+        <input type="text" id="vvod" placeholder="Поиск">
+        <div id="no-results" style="display: none; color: red;">Ничего не найдено</div>
+        <ol id="vyvod"></ol>
+        <div class="buttons-container">
+            <div>
+                <button class="button" data-target="content1">ШТУРМОВЫЕ ВИНТОВКИ</button>
+                <div id="content1" class="content">
+                    <h3>ШВ</h3>
+                    <p>Штурмовая винтовка (ШВ) — это универсальное оружие с достойным уроном и скорострельностью, с помощью которого можно уничтожать врагов на средней дистанции в различных боевых ситуациях.</p>
+                    <P>В данную категорию входят: M16A4, M416, SCAR-L, G36C, QBZ, K2, AUG, FAMAS, АКМ, Beril M762, Mk47 Mutant, Гроза, ACE32</P>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content2">МАРКСМАНСКИЕ ВИНТОВКИ</button>
+                <div id="content2" class="content">
+                    <h3>МВ</h3>
+                    <p>Марксманская винтовка (МВ) — это винтовка пехотных снайперов. Подходит для уничтожения целей на средней и дальней дистанции.</p>
+                    <P>В данную категорию входят: Mini14, QBU, Mk12, SKS, SLR, Mk14, VSS, Dragunov</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content3">ПИСТОЛЕТЫ-ПУЛЕМЕТЫ</button>
+                <div id="content3" class="content">
+                    <h3>ПП</h3>
+                    <p>Пистолет-пулемет (ПП) создан для обеспечения мобильности и ведения быстрого огня. Идеально подходит для уничтожения противников на ближней дистанции.</p>
+                    <P>В данную категорию входят: Автомат Томпсона, UMP, Micro UZI, Vector, ПП-19 "Бизон", MP5K, MP9, P90, JS9</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content4">СВ</button>
+                <div id="content4" class="content">
+                    <h3>СВ</h3>
+                    <p>Снайперская винтовка (СВ) обеспечивает высокую точность и урон. Подходит для ведения боя с дальней дистанции.</p>
+                    <P>В данную категорию входят: Kar98k, Виновка Мосина, M24, AWM, Win94, AMR "Рысь"</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content5">SHOTGUN</button>
+                <div id="content5" class="content">
+                    <h3>Дробовик</h3>
+                    <p>Дробовик — это оружие, ведущее огонь патронами с дробью, разлетающейся при выстреле. Эффективно для устранения угроз при внезапных столкновениях лицом к лицу.</p>
+                    <P>В данную категорию входят: S12K, S1897, S686, DBS, Обрез, O12</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content6">ПИСТОЛЕТ</button>
+                <div id="content6" class="content">
+                    <h3>Пистолет</h3>
+                    <p>Пистолет — оружие небольшое, однако оно составляет основу вспомогательной категории оружия.</p>
+                    <P>В данную категорию входят: P18C, P92, Skorpion, P1911, R45, Дигл, R1895</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content7">БЛИЖНИЙ БОЙ</button>
+                <div id="content7" class="content">
+                    <h3>Оружие ближнего боя</h3>
+                    <p>Оружие ближнего боя может использоваться для нанесения размашистых или колющих ударов. Оно способно нанести урон только вплотную, однако опасность такого оружия нельзя списывать со счетов.                    </p>
+                    <P>В данную категорию входят: Лом, Мачете, Сковорода, Серп, Кирка</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content8">МЕТАТЕЛЬНО ОРУЖИЕ</button>
+                <div id="content8" class="content">
+                    <h3>Метательное оружие </h3>
+                    <p>Метательное оружие — это оружие, которое можно метать или катить по поверхности. С помощью метательного оружия разного назначения можно остановить врагов, обеспечить себе укрытие и выполнить еще великое множество задач.</p>
+                    <P>В данную категорию входят: Светошумовыая граната, Осколочная граната, Коктейль Молотова, Бомба-липучка, Дымовая граната, С4, Гранат "Зона",  Граната-Обманка</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content9">ПУЛЕМЕТЫ</button>
+                <div id="content9" class="content">
+                    <h3>ПУЛЕМЕТЫ</h3>
+                    <p>Пулемёт— автоматическое оружие малого калибра, способное к устойчивому быстрому огню.</p>
+                    <P>В данную категорию входят: M249, ДП-28, MG3</p>
+                </div>
+            </div>
+            <div>
+                <button class="button" data-target="content10">ДРУГОЕ</button>
+                <div id="content10" class="content">
+                    <h3>ДРУГОЕ</h3>
+                    <p>Кроме обычного огнестрельного оружия в PUBG: BATTLEGROUNDS представлены различные виды особого оружия. Выбирайте способы уничтожения противника в соответствии с ситуацией.</p>
+                    <P>В данную категорию входят: M79, Арбалет, Миномет, Панцерфауст, Stun Gun</p>
+                </div>
+            </div>
+        </div>
+        </div>
     </MAIN>
-    <script src="script.js"></script>
+    <script src="script_search_1.js"></script>
+    <script src="script_search.js"></script>
+    <script src="script_1.js"></script>
+    <footer>
+        <div><h2>Мы в соц. сетях:</h2>
+            <ul class="social-iconss">
+                <li><a href="https://sun9-23.userapi.com/impg/ntk9GoyYwKwDDac7Rzp6t6YqqRVggsXW4w8_VQ/9gr-EUftaS4.jpg?size=2560x2560&quality=95&sign=87e40443b9a9df5b898603194db383e5&type=album"><i class="fab fa-vk"></i></a></li>
+                <li><a href="https://sun9-60.userapi.com/impg/uQ9jIO_0Gqc7sJU7Ps-4WjuFBBPvDobF0XDzUg/XoHKBVbKEu0.jpg?size=677x677&quality=95&sign=4aa365debeee584c91633380dbdf5bd3&type=album"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="https://sun9-10.userapi.com/impg/CtHHtGm54xNohtfYbvVjDNHsyx3TV_VqDYzMmA/fdoFhbfSAVs.jpg?size=1020x1020&quality=95&sign=2fb5116665732b4a6bbe181a86d6a3ee&type=album"><i class="fab fa-youtube"></i></a></li>
+            </ul></div>
+        <div>
+            <h2>PUBG || KRAFTON.</h2>
+            <p>Copyright © 2024 KRAFTON, INC. PUBG ЯВЛЯЕТСЯ ЗАРЕГИСТРИРОВАННОЙ ТОРГОВОЙ МАРКОЙ КОМПАНИИ KRAFTON, INC. All Rights Reserved.</p>
+        </div>
+        <div>
+            <h2>Контакты:</h2> 
+            <p>PUBG_buttlegrounds@mail.ru</p>
+            <p>+7 264 436 34 11</p>
+            <p>+7 287 431 87 99</p>
+            <p>10 Anson Road, #21-07 International Plaza, Singapore (Сингапур)</p>
+        </div>
+    </footer>
 </body>
 </html>

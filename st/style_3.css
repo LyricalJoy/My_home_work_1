@@ -1,0 +1,95 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+}
+
+/* Стили для навигации */
+nav {
+    padding: 20px;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Модальное окно */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Остается на месте */
+    z-index: 1; /* На переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    background-color: rgba(0, 0, 0, 0.4); /* Черный с прозрачностью */
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #2c2c2c; /* Темный фон для окна */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Ширина */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px; /* Отступы для меток */
+}
+
+input {
+    padding: 10px; /* Отступы внутри полей */
+    margin-bottom: 10px; /* Отступы между полями */
+    border: none; /* Убираем границы */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+button {
+    padding: 10px; /* Отступы внутри кнопки */
+    border: none; /* Убираем границы */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #ff6f20; /* Оранжевый фон */
+    color: white; /* Белый текст */
+    cursor: pointer; /* Указатель */
+}
+
+button:hover {
+    background-color: #e65c1b; /* Более темный оранжевый при наведении */
+}
+
+/* Стили для ошибок */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    display: flex; /* Используем flexbox для горизонтального расположения слайдов */
+    overflow: hidden; /* Скрываем слайды, которые выходят за пределы контейнера */
+    width: 100%; /* Устанавливаем ширину контейнера */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Каждый слайд занимает 100% ширины контейнера */
+    transition: transform 0.5s ease; /* Плавный переход при смене слайдов */
+}
+
+.carousel img {
+    width: 100%; /* Изображения занимают всю ширину слайда */
+    height: auto; /* Сохраняем пропорции изображений */
+}

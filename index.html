@@ -5,46 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оружия в PUBG</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="st/style_0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="img/icon00.jpg">
 </head>
 <body>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <h2>Авторизация</h2>
-            <form id="loginForm" onsubmit="return handleSubmit(event)">
-                <label for="username">Логин:</label>
-                <input type="text" id="username">
-                <div class="error" id="usernameError"></div>
-                
-                <label for="password">Пароль:</label>
-                <input type="password" id="password">
-                <div class="error" id="passwordError"></div>
-                
-                <button type="submit">Войти</button>
-            </form>
-        </div>
-    </div>
-
     <nav>
         <a href="index.html"> 
             <img src="img/logo1.jpg" alt="Логотип" class="logo_type"></a>
             <ul>
-                <li><a href="index.html">Описание</a></li>
+                <li><a href="index.html" style="color: rgb(255, 183, 0);">Описание</a></li>
                 <li><a href="search.html">Словарик</a></li>
                 <li><a href="slider.html">Галерея</a></li>
                 <li><a href="test.html">Тест</a></li>
             </ul>
-            <a href="tpaccount.html">
-                <img src="img/icon.jpg" alt="Личный кабинет">
-                Личный кабинет
-            </a>
+            <div class='lk'>
+                <div id="username"></div>
+                <a href="tpaccount.html">
+                    <img src="img/icon.jpg" alt="Личный кабинет">
+                    <a href="tpaccount.html" style="text-decoration: none; color: #ffffff; 
+                    font-size: 20px;">Личный кабинет</a>
+                </a>
+            <button id="logoutButton" style="display: none;">Выход</button></div>
     </nav>
     <main>
+        <div class="box">
+            <h2> PUBG: BATTLEGROUNDS </h2>
+            <img src="img/photo_1.jpg" style="height: 90%; width: 90%; padding-left: 100px;">
+            <p>PUBG: BATTLEGROUNDS — это шутер жанра «Королевская битва», в котором 100 игроков сражаются друг с другом. Собирайте оружие, транспорт и предметы на постоянно уменьшающемся поле сражений, чтобы превзойти своих соперников и стать последним уцелевшим игроком.            </p>
+            <h2>НАЧАЛО ИГРЫ</h2>
+            <img src="img/photo_2.jpg" style="height: 90%; width: 90%; padding-left: 100px;">
+            <p>Самолет вылетит, когда на стартовом острове соберется не более 100 игроков. Откройте карту и заранее изучите место, где вы хотели бы приземлиться.</p>
+            <h2>ПРИЗЕМЛЕНИЕ</h2>
+            <img src="img/photo_3.jpg" style="height: 90%; width: 90%; padding-left: 100px;">
+            <p>Когда самолет заходит на карту, вы можете катапультироваться в любое время. Будьте осторожны, в одном том де месте могут приземлиться множество игроков! </p>
+            <h2>СНАРЯДИСЬ</h2>
+            <img src="img/photo_4.png" style="height: 90%; width: 90%; padding-left: 100px;">
+            <p>Иищте снарядение после приземления.
+                Предметы будут появляться случайным образом по всей карте: на улицах и внутри зданий. Собранное оружие, броня и предметы для восстановления здоровья помогут вам выжить.
+            </p>
+            <h2>УЦЕЛЕЙ</h2>
+            <img src="img/photo_5.jpg" style="height: 90%; width: 90%; padding-left: 100px;">
+            <p>Теперь ваша очередь уцелеть до конца. Станьте последним живым игроком на поле сражений и получите заветный куриный ужин!            </p>
+            <img src="img/photo_6.jpg" style="height: 90%; width: 90%; padding-left: 100px;">
+            <h2>Winner, winner, chicken dinner!</h2>
+        </div>
     </main>
     <footer>
-        <div><h2>Мы в соц. сетях:</h2></div>
+        <div><h2>Мы в соц. сетях:</h2>
+            <ul class="social-iconss">
+                <li><a href="https://sun9-23.userapi.com/impg/ntk9GoyYwKwDDac7Rzp6t6YqqRVggsXW4w8_VQ/9gr-EUftaS4.jpg?size=2560x2560&quality=95&sign=87e40443b9a9df5b898603194db383e5&type=album"><i class="fab fa-vk"></i></a></li>
+                <li><a href="https://sun9-60.userapi.com/impg/uQ9jIO_0Gqc7sJU7Ps-4WjuFBBPvDobF0XDzUg/XoHKBVbKEu0.jpg?size=677x677&quality=95&sign=4aa365debeee584c91633380dbdf5bd3&type=album"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="https://sun9-10.userapi.com/impg/CtHHtGm54xNohtfYbvVjDNHsyx3TV_VqDYzMmA/fdoFhbfSAVs.jpg?size=1020x1020&quality=95&sign=2fb5116665732b4a6bbe181a86d6a3ee&type=album"><i class="fab fa-youtube"></i></a></li>
+            </ul></div>
         <div>
             <h2>PUBG || KRAFTON.</h2>
             <p>Copyright © 2024 KRAFTON, INC. PUBG ЯВЛЯЕТСЯ ЗАРЕГИСТРИРОВАННОЙ ТОРГОВОЙ МАРКОЙ КОМПАНИИ KRAFTON, INC. All Rights Reserved.</p>
@@ -57,10 +70,11 @@
             <p>10 Anson Road, #21-07 International Plaza, Singapore (Сингапур)</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script_1.js"></script>
 </body>
 </html>
 <!-- Итак, последовательность выглядит так:
 //1. git add . 
-//2. git commit -m "сообщение о коммите" 
-//3. git push origin master -->
+//2. git commit -m "Обновление" 
+//3. git push origin master 
+-->

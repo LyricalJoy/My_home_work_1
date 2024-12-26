@@ -1,0 +1,59 @@
+.hidden {
+    display: none;
+}
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+form {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+div {
+    margin-bottom: 15px;
+}
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+input[type="text"], input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+}
+label {
+    display: block;
+    margin: 5px 0;
+}
+input[type="radio"] {
+    margin-right: 10px;
+}
+button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.result {
+    margin-top: 20px;
+    text-align: center;
+}

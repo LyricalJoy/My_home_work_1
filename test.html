@@ -5,27 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оружия в PUBG</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="st/style_1.css">
+    <link rel="stylesheet" href="st/style_4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="img/icon00.jpg">
 </head>
 <body>
-    <NAV>
+    <nav>
         <a href="index.html"> 
             <img src="img/logo1.jpg" alt="Логотип" class="logo_type"></a>
             <ul>
-                <li><a href="index.html">Описание</li></a>
-                <li><a href="search.html">Словарик</li></a>
-                <li><a href="slider.html">Галерея</li></a>
-                <li><a href="test.html">Тест</li></a>
+                <li><a href="index.html">Описание</a></li>
+                <li><a href="search.html">Словарик</a></li>
+                <li><a href="slider.html">Галерея</a></li>
+                <li><a href="test.html" style="color: rgb(255, 183, 0);">Тест</a></li>
             </ul>
-            <a href="tpaccount.html">
-                <img src="img/icon.jpg" alt="Личный кабинет">
-                Личный кабинет
-            </a>
-    </NAV>
+            <div class='lk'>
+                <div id="username"></div>
+                <a href="tpaccount.html">
+                    <img src="img/icon.jpg" alt="Личный кабинет">
+                    <a href="tpaccount.html" style="text-decoration: none; color: #ffffff; 
+                    font-size: 20px;">Личный кабинет</a>
+                </a>
+            <button id="logoutButton" style="display: none;">Выход</button></div>
+    </nav>
     <MAIN>
+        <div class="box">
+        <h1>Тест на знание PUBG</h1>
+        <img src="img/fon_4.png" alt="" style="width: 80%; height: 80%; padding-left: 100px; padding-bottom: 20px;">
 
+        <form id="quizForm">
+            <div>
+                <p>1. Какой год был годом выпуска PUBG?</p>
+                <input type="text" name="question1" placeholder="Ваш ответ">
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <div>
+                <p>2. Сколько игроков может участвовать в одной игре PUBG?</p>
+                <input type="number" name="question2" placeholder="Ваш ответ">
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <div>
+                <p>3. Как называется карта, которая была первой в PUBG?</p>
+                <label><input type="radio" name="question3" value="Erangel"> Erangel</label>
+                <label><input type="radio" name="question3" value="Sanhok"> Sanhok</label>
+                <label><input type="radio" name="question3" value="Vikendi"> Vikendi</label>
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <div>
+                <p>4. Какой транспорт доступен на карте Erangel?</p>
+                <label><input type="radio" name="question4" value="Мотоцикл"> Мотоцикл</label>
+                <label><input type="radio" name="question4" value="Багги"> Багги</label>
+                <label><input type="radio" name="question4" value="Все вышеперечисленное"> Все вышеперечисленное</label>
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <div>
+                <p>5. Какой предмет используется для лечения в PUBG?</p>
+                <input type="text" name="question5" placeholder="Ваш ответ">
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <div>
+                <p>6. Какой тип оружия является снайперской винтовкой?</p>
+                <label><input type="radio" name="question6" value="Kar98k"> Kar98k</label>
+                <label><input type="radio" name="question6" value="M416"> M416</label>
+                <label><input type="radio" name="question6" value="UMP45"> UMP45</label>
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <div>
+                <p>7. Какой режим игры позволяет играть в одиночку?</p>
+                <label><input type="radio" name="question7" value="Solo"> Solo</label>
+                <label><input type="radio" name="question7" value="Duo"> Duo</label>
+                <label><input type="radio" name="question7" value="Squad"> Squad</label>
+                <div class="feedback hidden"></div>
+            </div>
+    
+            <button type="button" id="checkButton">Проверить</button>
+            <button type="button" id="restartButton" class="hidden">Пройти тест заново</button>
+            <div class="result">
+                <h3>Ваш результат:</h3>
+                <div id="scoreDisplay"></div>
+                <div id="detailedResults"></div>
+        </form>
+
+
+    </div>
     </MAIN>
-    <script src="script.js"></script>
+    <footer>
+        <div><h2>Мы в соц. сетях:</h2>
+            <ul class="social-iconss">
+                <li><a href="https://sun9-23.userapi.com/impg/ntk9GoyYwKwDDac7Rzp6t6YqqRVggsXW4w8_VQ/9gr-EUftaS4.jpg?size=2560x2560&quality=95&sign=87e40443b9a9df5b898603194db383e5&type=album"><i class="fab fa-vk"></i></a></li>
+                <li><a href="https://sun9-60.userapi.com/impg/uQ9jIO_0Gqc7sJU7Ps-4WjuFBBPvDobF0XDzUg/XoHKBVbKEu0.jpg?size=677x677&quality=95&sign=4aa365debeee584c91633380dbdf5bd3&type=album"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="https://sun9-10.userapi.com/impg/CtHHtGm54xNohtfYbvVjDNHsyx3TV_VqDYzMmA/fdoFhbfSAVs.jpg?size=1020x1020&quality=95&sign=2fb5116665732b4a6bbe181a86d6a3ee&type=album"><i class="fab fa-youtube"></i></a></li>
+            </ul></div>
+        <div>
+            <h2>PUBG || KRAFTON.</h2>
+            <p>Copyright © 2024 KRAFTON, INC. PUBG ЯВЛЯЕТСЯ ЗАРЕГИСТРИРОВАННОЙ ТОРГОВОЙ МАРКОЙ КОМПАНИИ KRAFTON, INC. All Rights Reserved.</p>
+        </div>
+        <div>
+            <h2>Контакты:</h2> 
+            <p>PUBG_buttlegrounds@mail.ru</p>
+            <p>+7 264 436 34 11</p>
+            <p>+7 287 431 87 99</p>
+            <p>10 Anson Road, #21-07 International Plaza, Singapore (Сингапур)</p>
+        </div>
+    </footer>
+    <script src="script_test.js"></script>
+    <script src="script_1.js"></script>
 </body>
 </html>
